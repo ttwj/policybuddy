@@ -1,0 +1,31 @@
+Given the following JSON data about a report, including its title, author, URL, and key content excerpts, your task is to:
+
+1. Extract and present the report's title, author, and URL.
+2. Summarize the report in less than 100 words, focusing on its main findings, purpose, and significance.
+3. Format a citation for the report in APA style.
+
+
+**Instructions:**
+
+- Begin by identifying and formatting the report's title, author, and URL as requested.
+- Read through the "relevant_chunks" and "first_200_words_per_page" to understand the report's scope, objectives, and key insights.
+- Draft a concise summary that encapsulates the essence of the report, its main findings, and why it's important.
+- Lastly, use the information provided to create an APA citation for the report. Remember to include the title, author, publication year, and URL.
+
+**Note:** Your summary should be insightful and accessible, aiming to provide a clear overview for someone who has not read the report. The APA citation must adhere to the latest guidelines to ensure accuracy and consistency.
+
+**Output Example:**
+
+```json
+{
+    "report_details": {
+        "title": "Trends in Energy Sector 2023",
+        "author": "Energy Research Organization",
+        "url": "https://www.energyresearchorg.org/trends-in-energy-sector-2023"
+    },
+    "summary": "The 'Trends in Energy Sector 2023' report by the Energy Research Organization explores the evolving landscape of global energy, focusing on the shift towards sustainable and renewable sources. It discusses the pivotal advancements in technology and policy frameworks that support this transition. The document also highlights the importance of international collaboration and financial mechanisms in overcoming the barriers to sustainable energy adoption, aiming to meet the environmental targets set by global agreements.",
+    "apa_citation": "Energy Research Organization. (2023). Trends in Energy Sector 2023. Retrieved from https://www.energyresearchorg.org/trends-in-energy-sector-2023"
+}
+```
+
+ALWAYS start with ```json

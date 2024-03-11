@@ -1,0 +1,61 @@
+=== Instructions for Analyzing CSV Data and Generating Report Content ====
+
+You will receive a CSV file containing topics potentially relevant to your research. Each topic is associated with specific keywords and representative documents. Your task involves two main objectives: assessing each topic's relevance to various sections of your report and crafting sample report lines based on this analysis.
+
+
+1. **Review the CSV File**: Start by examining the CSV content, paying close attention to the `Topic`, `Count`, `Name`, `Representation` (keywords), and `Representative_Docs` (contextual examples).
+
+2. **Evaluate Topic Relevance**:
+    - For every listed topic, assess its significance to your research focus areas, such as energy trends, financial analyses, decarbonization strategies, or environmental impacts.
+    - Consider both direct and indirect relevance to your report’s sections.
+
+3. **Score and Justify Relevance**:
+    - Assign a relevance score from 1 to 10 (with 10 being highly relevant).
+    - Provide a rationale explaining the topic's relevance, specifying which section(s) of the report it pertains to.
+
+4. **Generate Sample Report Lines**:
+    - Based on the topic’s relevance, draft 2-3 sentences that synthesize key insights. These lines should be ready-to-use or easily adaptable for inclusion in your report.
+    
+5. **Format Your Findings**:
+Organize your evaluation and generated content into a structured JSON object for each topic, comprising:
+    - `topic_name`: Unique identifier for the topic.
+    - `topic_description`: A concise summary of what the topic entails.
+    - `relevance_rationale`: Explanation for the topic's relevance, linked to specific report sections.
+    - `report_section`: The most applicable section(s) of your report for this topic.
+    - `final_relevance_score`: Your assigned relevance score, adjusted to a 0-100 scale for precision.
+    - `sample_report_lines`: Drafted sentences encapsulating the topic’s key points, suitable for report integration.
+
+
+### Final Notes:
+- Ensure consistency and accuracy in your evaluations and written samples.
+- Aim for clear, concise, and informative text in your sample report lines, providing valuable insights or summaries derived from the analyzed topics.
+
+#### Example Output Format (Array of JSON):
+
+```json
+[{
+  "topic_name": "example_topic",
+  "topic_description": "A brief overview focusing on X aspect related to XXX's energy sector.",
+  "relevance_rationale": "This topic sheds light on Y, crucial for our report's section on Z.",
+  "report_section": "Specific Section Name",
+  "final_relevance_score": 75,
+  "sample_report_lines": "The APAC region faces unique challenges in transitioning from XX X power, notably in X and Y. Addressing these issues requires comprehensive strategies including A, B, and C, highlighting the need for robust policy support and investment."
+}, 
+{
+    "topic_name": "Green Infrastructure Initiatives",
+    "topic_description": "Analysis of global efforts to integrate green infrastructure within urban planning to combat climate change effects.",
+    "relevance_rationale": "Directly aligns with our report's focus on 'Urban Adaptation Strategies', showcasing innovative approaches to enhance city resilience.",
+    "report_section": "Urban Adaptation Strategies",
+    "final_relevance_score": 88,
+    "sample_report_lines": "Cities worldwide are increasingly adopting green infrastructure solutions, such as green roofs and urban forests, to mitigate urban heat islands and improve air quality. These initiatives not only contribute to climate change adaptation but also offer social and economic benefits, emphasizing the multifaceted value of sustainable urban planning."
+},
+{
+    "topic_name": "Something Random About Weather or someone's name",
+    "topic_description": "There's some information here related to weather patterns and stuff, but it's not very clear how it's relevant.",
+    "relevance_rationale": "Might be sort of related to our work on climate, but it's hard to tell without more specifics.",
+    "report_section": "Miscellaneous Observations",
+    "final_relevance_score": 0,
+    "sample_report_lines": "Weather patterns are changing, or maybe they aren't. It's really hard to say without more data, but there could be something worth looking into here, possibly related to climate change or something else. This could be rubbish"
+}
+```
+

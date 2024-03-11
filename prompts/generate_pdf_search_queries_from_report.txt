@@ -1,0 +1,94 @@
+As an expert in research and policy analysis, with a profound command over Google Search and other search engines for extracting in-depth information, you will be provided an existing draft report with gaps / missing info.
+
+These refined queries are designed to extract high-quality PDF documents from Google, focusing on broader aspects of sustainability, including environmental policies, green finance, renewable energy transitions, and climate change mitigation strategies. Your approach should leverage advanced search techniques and operators to pinpoint documents that offer rich insights, authoritative analyses, and comprehensive data.
+
+== Your Task ==
+1. **Deep Dive into Report Content and Citations:**
+   - Analyze the `report_content` and `citations` to extract specific initiatives, partnerships, and outcomes related to `section_name`.
+   - Identify unique phrases, project names, and specific goals mentioned within the content that could serve as keywords for targeted searches.
+
+2. **Extracting Specific Information Needs:**
+   - From the `more_facts_and_figures_required` section, identify the precise information gaps related to `section_name`
+   - Translate these needs into actionable search query terms.
+
+3. **Crafting Advanced Search Queries:**
+   - Utilize advanced search operators such as "filetype:pdf" for retrieving PDF documents, "intitle:" for finding documents with specific titles, and "inurl:" to target URLs containing certain keywords.
+   - Combine extracted keywords with these operators, ensuring the queries are constructed to pull in-depth reports, academic papers, and policy analyses.
+
+4. **Formulating Queries for Broad yet Targeted Searches:**
+   - Avoid overly narrow filters. Instead of using "site:", incorporate domain names or TLDs directly in the search query for a balanced approach.
+   - Design queries that encompass a mix of high-quality websites known for their authoritative content on environmental policies, green finance, and energy transition.
+
+5. **JSON Structuring for Clarity:**
+   - Organize the crafted search queries into a structured JSON format, categorizing them under relevant themes derived from the report content.
+   - Each query should be accompanied by a brief description of the information gap it aims to address, along with suggested domains or TLDs for a focused yet comprehensive search.
+
+
+
+
+== Reference JSON Template ===
+
+```json
+{
+  "targeted_search_queries": {
+    "green_finance_innovations": [
+      {
+        // Targeting English content with specific domains and using country TLDs for broader searches in non-English speaking regions.
+        "knowledge_gaps": "Understanding the implementation and impact of green finance mechanisms in the APAC region, with a focus on scalability and innovative models.", 
+        "description": "Investigate the role and effectiveness of green finance in promoting sustainable development within the APAC economies.",
+        "query": "green finance APAC .pdf unep.org adb.org .cn .kr .jp" // Full domains for English, country TLD for non-English, avoid using site: explicitly
+      },
+      {
+        // Applying the same principle here: full domains for English content and country TLDs for potentially non-English content to ensure broad coverage.
+        "knowledge_gaps": "Assessment of successful green finance initiatives in African countries, identifying key drivers and barriers.", 
+        "description": "Explore impactful green finance strategies across Africa, highlighting projects that demonstrate significant environmental and economic benefits.",
+        "query": "green finance Africa .pdf afdb.org uneca.org .za .org .ng" // Full domains for English, country TLD for non-English, avoid using site: explicitly
+      }
+    ],
+    "renewable_energy_transitions": [
+      {
+        // For ASEAN renewable energy, we utilize specific sites for English-language insights and country TLDs for wider regional coverage.
+        "knowledge_gaps": "Exploring renewable energy policy successes in ASEAN countries to understand effective frameworks and incentives.", 
+        "description": "Identify policies and incentives that have significantly contributed to renewable energy growth within the ASEAN region.",
+        "query": "renewable energy ASEAN .pdf asean.org eria.org .th .my .ph" // Full domains for English, country TLD for non-English, avoid using site: explicitly
+      },
+      {
+        // APAC's renewable energy insights are gathered using specific sites for English content and broad domains for non-English content, ensuring comprehensive coverage.
+        "knowledge_gaps": "Reviewing advancements and strategic approaches to renewable energy adoption in the broader APAC area.", 
+        "description": "Gather insights into how technological innovations and strategies are fostering renewable energy sector growth in APAC countries.",
+        "query": "renewable energy APAC .pdf adb.org iea.org .in .jp .cn" // Full domains for English, country TLD for non-English, avoid using site: explicitly
+      }
+    ],
+    "climate_change_mitigation": [
+      {
+        // Mixing full domains for English websites with country TLDs for broader search in non-English speaking African countries.
+        "knowledge_gaps": "In-depth analysis of climate change mitigation technologies developed within African contexts, evaluating their scalability and global applicability.", 
+        "description": "Examine groundbreaking climate mitigation solutions from Africa, considering their potential for worldwide application.",
+        "query": "climate change mitigation Africa .pdf afdb.org ipcc.ch .za .ke .eg" // Full domains for English, country TLD for non-English
+      },
+      {
+        // ASEAN CCS projects are explored with specific sites for English content and a broad approach for non-English content for comprehensive insights.
+        "knowledge_gaps": "Evaluating CCS project outcomes in ASEAN nations to understand their efficacy and challenges encountered.", 
+        "description": "Analyze carbon capture and storage implementations in the ASEAN context, focusing on results and operational hurdles.",
+        "query": "CCS ASEAN .pdf asean.org .th .id .vn" // Full domains for English, country TLD for non-English
+      }
+    ],
+    "technology_for_sustainability": [
+      {
+        // Blockchain in APAC sustainability efforts: specific sites for English-language content and country TLDs for non-English content to ensure broad and inclusive searches.
+        "knowledge_gaps": "Utilization of blockchain technology in sustainability efforts across APAC, examining specific use cases, achievements, and limitations.", 
+        "description": "Delve into blockchain applications within APAC's sustainability projects, detailing successes and learning points.",
+        "query": "blockchain sustainability APAC .pdf adb.org itu.int .kr .gov.in .gov.sg" // Full domains for English, country TLD for non-English
+      },
+      {
+        // AI in African environmental conservation: leveraging full domains for English content and country TLDs for broader reach in potentially non-English content.
+        "knowledge_gaps": "Impact of AI on environmental conservation in Africa, spotlighting innovative uses and measurable outcomes.", 
+        "description": "Explore how AI technologies are being deployed for environmental conservation across Africa, featuring case studies and impacts.",
+        "query": "AI environmental conservation Africa .pdf afdb.org .za .ke .tz" // Full domains for English, country TLD for non-English
+      }
+    ]
+  }
+}
+```
+
+Important: Generate JSON only and generate as MANY queries as possible

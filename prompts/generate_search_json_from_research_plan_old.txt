@@ -1,0 +1,89 @@
+As an expert in research and policy analysis, with a profound command over Google Search and other search engines for extracting in-depth information, your mission is to distill the essence of a provided report into a structured YAML format. This intricate process demands a deep understanding of the report's content, discerning the critical themes and formulating high-quality, detailed questions for each section, followed by translating these insights into precise search queries. The ultimate aim is to outline a research framework that is broad enough to encompass diverse sources yet targeted enough to secure relevant data.
+
+**Step 1: Comprehensive Report Analysis**
+
+- Initiate by thoroughly analyzing the report. Focus on understanding its structure, the objectives highlighted in the executive summary, the foundational insights in the introduction, and the nuanced analysis in the subsequent sections. Identify any dominant themes or keywords that could serve as anchors for your search queries.
+
+**Step 2: Identification of Key Themes / Stakeholders**
+
+- Identify the key power brokers / stakeholders in industry so that we can find their websites. For instance, in carbon market, the key stakeholders are UNFCCC and Governments. What is their website?
+
+**Step 3: Crafting Comprehensive Questions Across Diverse Themes**
+
+In this crucial step, your task is to develop questions from the report's identified themes. These inquiries should aim to deepen understanding or address knowledge gaps, while embracing a broad spectrum of viewpoints (optimistic/pessimistic/pro-growth/cautious). This includes delving into sustainability negotiations, technological advancements, and economic implications, with a mindful inclusion of geopolitical contexts. Adhere to these guidelines for creating multi-dimensional questions:
+
+- **Rich in Detail**: Craft each question with 10-20 words, ensuring it encapsulates enough detail for targeted exploration.
+- **Keyword Integration**: Use relevant keywords from the report’s thematic analysis within each question to enhance search precision.
+- **Strategic Targeting**: Design each question to seek out specific types of information or sources, such as:
+  - "How have academic journals post-2023 discussed [specific field] innovations amidst sustainability and geopolitical challenges?"
+  - "What are the economic impacts on [specific sector] due to shifts in government policies, influenced by global market trends?"
+  - "Identify emerging trends in [topic] shaped by both technological progress and international sustainability agreements, as reported by credible news outlets in 2023."
+  - "Discuss the role of new technologies in [field], considering patents filed after date XXX, in overcoming economic hurdles and enhancing efficiency."
+- **Exploratory Goal**: Frame questions to uncover insights, dissect developments, or understand broader impacts across various facets including geopolitical tensions, economic dynamics, and technological breakthroughs.
+- **IMPORTANT: GENERATE >5 QUESTIONS**
+
+Furthermore, ensure your >5 questions reflect diverse perspectives, categorized as follows:
+- **Positive Focus**: Query about successes, innovations, and growth opportunities. For instance, "Which initiatives in [area] have shown remarkable progress in integrating technology with sustainability efforts?"
+- **Negative Focus**: Investigate obstacles, areas of contention, and unmet goals. For example, "What ongoing challenges do sectors face in aligning with global sustainability targets amid economic pressures?"
+- **Skeptical Focus**: Delve into critiques or controversial aspects surrounding certain advancements or policies. Such as, "How valid are the criticisms regarding the effectiveness of [specific policy] in actually reducing carbon emissions in [sector]?"
+- **More Research Needed**: Identify gaps in current knowledge or areas that warrant further investigation. Example: "What specific aspects of [topic] require more in-depth research to understand its long-term impacts on environmental sustainability?"
+- **Unsure/Debating Perspectives**: Highlight areas where there is significant debate or lack of consensus among experts. A question could be, "Why is there a divide among experts regarding the potential of [technology] to significantly contribute to sustainability goals?"
+
+**Step 4: Crafting Precise Search Queries**
+
+- Translate the detailed questions into precise search queries. Utilize advanced search techniques and operators to refine your queries, ensuring they are structured to fetch information from the desired sources or within specific timeframes.
+
+**Step 5: Structuring into YAML**
+
+Organize your detailed questions and corresponding search queries into a YAML format, categorizing them under the respective sections of the report they relate to.
+
+== [YAML Template]===
+```
+```yaml
+report_analysis:
+  exec_summary:
+    key_themes_and_stakeholders: #Step 2
+      - UNFCCC
+      - Climate Finance Orgs
+      - National Govts
+      - "..."
+    qns: #Step 3
+      - view: positive
+        qn_with_sources: "Identify strategies from Article 6 negotiations that have successfully enhanced global climate cooperation, according to reports post-2023."
+      - view: negative
+        qn_with_sources: "Examine the principal obstacles in achieving consensus on Article 6 mechanisms among UNFCCC parties post-2023, as reported by authoritative sources."
+      - view: skeptical
+        qn_with_sources: "...."
+      - view: unsure
+        qn_with_sources: "...."
+      - view: positive
+        qn_with_sources: "...."
+      # ... /* IMPT: > 5 QUESTIONS */
+    search_qrys:
+      - "\"Article 6 negotiations\" AND \"success stories\" after:2023"
+      - "\"Article 6 negotiations\" AND \"barriers consensus\" after:2023"
+  intro:
+    key_themes_and_stakeholders: #Step 2
+      - Paris Agreement Participants
+      - Intl Environmental Agencies
+      - ".."
+      # ...
+    qns: #Step 3
+      - view: positive
+        qn_with_sources: "Explore how technological advancements have bolstered international cooperation under Article 6 of the Paris Agreement, focusing on reports post-2023."
+      # ..
+      - view: negative
+        qn_with_sources: "Investigate the challenges countries face in aligning their national policies with Article 6 cooperative mechanisms, as outlined in recent studies."
+      - view: skeptical
+        qn_with_sources: "...."
+      - view: more_research_needed
+        qn_with_sources: "...."
+      # ..
+      # /* IMT: >5 QUESTIONS */
+    search_qrys:
+      - "\"Article 6\" AND \"Paris Agreement\" AND \"technological advancements\" AND \"international cooperation\""
+      - "\"Article 6\" AND \"Paris Agreement\" AND \"national policy alignment challenges\""
+# ...
+
+
+```
